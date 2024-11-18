@@ -4,56 +4,11 @@
   <title>Süleymaniye Cami Camiler Sayfa</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    * {
-               box-sizing: border-box;
-           }
-           body {
-               font-family: Verdana, sans-serif;
-               margin: 0;
-               padding: 0;
-           }
-        
-           .menu {
-               float: left;
-               width: 10%;
-               padding: 10px;
-           }
-           .menuitem {
-               padding: 8px;
-               margin-top: 7px;
-               border-bottom: 1px solid #f1f1f1;
-           }
-           .main {
-               float: left;
-               width: 80%;
-               padding: 20px;
-               overflow: hidden;
-                 /*ortadaki div sayfası ortalanmasını sağlıyor*/
-           }
-           .right {
-               background-color: lightblue;
-               float: right;
-               width: 10%;
-               padding: 20px;
-               margin-top: 7px;
-                /*sağdaki div sayfasının içinde renklendirme */
-           }
-           details > summary {
-               padding: 4px;
-               background-color: #eeeeee;
-               border: none;
-               box-shadow: 1px 1px 2px #bbbbbb;
-               cursor: pointer;
-               /*soldaki div sayfası çevresine renklendirme */
-           }
-   
-
-</style>
+ <link rel="stylesheet" href="ana_sayfa.css">
 </head>
 <body style="font-family:Verdana;">
 
-<div style="text-align: center; background-color:#e1e1e1;padding:15px;">
+<div style="text-align: center; background-color:lightblue;padding:15px;">
   <h1>Süleymaniye Camii</h1>
   <h3>(İstanbul/Fatih yer alır.)</h3>
 </div>
@@ -79,6 +34,24 @@
       <button class="button"><a href="/ana_sayfa8.html">Tepegöz</a></button>
       <button class="button"><a href="/ana_sayfa9.html">Gulyabani</a></button>
   </details>
+  <hr>
+ <h3 id="DarkModetext">Karanlık Mod AÇIK</h3>
+  <button onclick="darkMode()">SiyahMod</button>
+    <button onclick="lightMode()">BeyazMod</button>
+    <script>
+        function darkMode() {
+            let element = document.body;
+            let content = document.getElementById("DarkModetext");
+            element.className = "dark-mode";
+            content.innerText = "Karanlık Mod AÇIK";
+        }
+        function lightMode() {
+            let element = document.body;
+            let content = document.getElementById("DarkModetext");
+            element.className = "light-mode";
+            content.innerText = "Karanlık Mod KAPALI";
+        }
+    </script>
 </div>
 
  

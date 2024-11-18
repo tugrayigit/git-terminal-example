@@ -1,23 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giriş Yap</title>
     <style>
-        body {
-            background-image: url('resim/download.jpg');
-            background-size: cover;
-            background-position: center;
+
+        .button1 {
+           background-color: white; 
+           color: black; 
+           border: 2px solid #04AA6D;
+         }
+
+        .button1:hover {
+           background-color: #04AA6D;
+           color: white;
         }
+        body {
+     
+     background-image: url('resim/download.jpg');
+     background-size: cover;
+     background-position: center;
+     background-attachment: fixed;
+     padding: 0;
+            background-color: white;
+            color: black;
+            font-size: 25px;
+            
+
+       }
+
         .container {
             max-width: 400px;
             margin: auto;
-            background: #fff;
+            background: #ffffff;
             padding: 20px;
             border-radius: 50px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+       
         }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
         input[type="text"],
         input[type="password"] {
             width: 90%;
@@ -25,6 +51,7 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+
         input[type="submit"] {
             background: #5cb85c;
             color: #fff;
@@ -34,49 +61,50 @@
             border-radius: 5px;
             width: 100%;
         }
+
         input[type="submit"]:hover {
             background: #4cae4c;
         }
-        .error {
-            color: red;
-            text-align: center;
-            margin-top: 10px;
-        }
-    </style>  
+
+    </style>
 </head>
 <body>
-    <article class="container">
-        <h1>Giriş Yap</h1>
-        <form id="login-form">
+    <h3 id="DarkModetext">Dark Mode is OFF</h3>
+    <button onclick="darkMode()">Darkmode</button>
+      <button onclick="lightMode()">LightMode</button>
+      <script>
+          function darkMode() {
+              let element = document.body;
+              let content = document.getElementById("DarkModetext");
+              element.className = "dark-mode";
+              content.innerText = "Dark Mode is ON";
+          }
+          function lightMode() {
+              let element = document.body;
+              let content = document.getElementById("DarkModetext");
+              element.className = "light-mode";
+              content.innerText = "Dark Mode is OFF";
+          }
+      </script>
+<div class="container">
+    <h2>Giriş Yap</h2>
+    <form action="/ana_sayfa.html" >
+        <div class="form-group">
             <label for="email">E-posta:</label>
             <input type="text" id="email" name="email" required><br><br>
-            <label for="şifre">Şifre:</label>
-            <input type="password" id="şifre" name="şifre" required><br><br>
-            <input type="submit" value="Giriş Yap"><br><br>
-            <div class="error" id="error-message"></div>
-             
-        </form>
-    </article>
+        </div>
 
-    <script>
+        <div class="form-group">
+            <label for="password">Şifre:</label>
+            <input type="password" id="password" name="password" required><br><br>
+        </div>
 
-        document.getElementById('login-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Formun varsayılan davranışını engelle
+        <input type="submit" value="Giriş Yap"><br><br>
 
-            const email = document.getElementById('email').value;
-            const şifre = document.getElementById('şifre').value;
+        <button class="button button1"><a href="/ikinci_ornek.html">Yeni Hesap Aç</a></button>
+    </form>
+</div>
 
-            // Kullanıcı bilgilerini kontrol et
-            const storedEmail = localStorage.getItem('email');
-            const storedŞifre = localStorage.getItem('şifre');
 
-            if (email === storedEmail && şifre === storedŞifre) {
-                alert('Giriş başarılı!');
-                window.location.href = '/ana_sayfa.html'; // Ana sayfaya yönlendir
-            } else {
-                document.getElementById('error-message').innerText = 'E-posta veya şifre hatalı!';
-            }
-        });
-    </script>
 </body>
 </html>
