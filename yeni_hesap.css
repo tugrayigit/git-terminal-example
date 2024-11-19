@@ -7,6 +7,7 @@
              /*ara plan resim */
             
         }
+        
         .container {
             max-width: 400px;
             margin: auto;
@@ -22,6 +23,7 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+
         input[type="submit"] {
             background: #5cb85c;
             color: #fff;
@@ -31,9 +33,11 @@
             border-radius: 5px;
             width: 100%;
         }
+
         input[type="submit"]:hover {
             background: #4cae4c;
         }
+
         .button1 {
             background-color: white; 
             color: black; 

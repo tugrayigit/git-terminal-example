@@ -4,6 +4,8 @@
             border-radius: 5px;
            
         }
+
+        /* web sitede görünen kısım*/
         body {
             font-family: Verdana, sans-serif;
             margin: 0;
@@ -11,17 +13,15 @@
             background-color: white;
             color: black;
         }
-     
+
+     /*sol taraftaki div diğer web sitelere gidiyor*/
         .menu {
             float: left;
             width: 10%;
             padding: 10px;
         }
-        .menuitem {
-            padding: 8px;
-            margin-top: 7px;
-            border-bottom: 1px solid lightblue;
-        }
+
+        /*ortadaki div bilgi veriyor*/
         .main {
             float: left;
             width: 80%;
@@ -29,6 +29,8 @@
             overflow: hidden;
               /*ortadaki div sayfası ortalanmasını sağlıyor*/
         }
+ 
+        /*sağdaki div başlıklara gidiyor butonlar*/
         .right {
             background-color: lightblue;
             float: right;
@@ -37,6 +39,7 @@
             margin-top: 7px;
              /*sağdaki div sayfasının içinde renklendirme */
         }
+
         details > summary {
             padding: 4px;
             background-color: lightblue;
@@ -46,14 +49,28 @@
             /*soldaki div sayfası çevresine renklendirme */
         }
         
-      
         .dark-mode {
             background-color: black;
             color: white;
+          /*web siteyi siyah yapmak için */
         }
 
         .light-mode {
             background-color: white;
             color: black;
+         /*web siteyi beyaz yapmak için*/
+        }
+        
+        summary{
+            color: black;
+         /*soldaki divin içindeki summary siyah yapmak için*/
         }
 
+        .siyah{
+            color: #000;
+         /*en üsteki divin içindeki yazıları siyah yamak için*/
+        }
+
+    .right p a {
+      color: #000000;
+    }
