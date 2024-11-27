@@ -1,110 +1,158 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giriş Yap</title>
-    <style>
+  <title>Van Gölü Örnek Sayfa</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="mehmet.css">
+  <style>
+    .İletişim {
+      color: black;
+    }
 
-        .button1 {
-           background-color: white; 
-           color: black; 
-           border: 2px solid #04AA6D;
-         }
+    /* Karanlık Mod ve Beyaz Mod Stil Tanımlamaları */
+    body.dark-mode {
+      background-color: #333;
+      color: white;
+    }
 
-        .button1:hover {
-           background-color: #04AA6D;
-           color: white;
-        }
-        body {
-     
-     background-image: url('resim/download.jpg');
-     background-size: cover;
-     background-position: center;
-     background-attachment: fixed;
-     padding: 0;
-            background-color: white;
-            color: black;
-            font-size: 25px;
-            
+    body.light-mode {
+      background-color: white;
+      color: black;
+    }
 
-       }
+    /* Ek stil iyileştirmeleri */
+    .nav-links {
+      list-style: none;
+      padding: 0;
+    }
 
-        .container {
-            max-width: 400px;
-            margin: auto;
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 50px;
-       
-        }
+    .nav-links li {
+      margin: 10px 0;
+    }
 
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
+    .nav-links a {
+      text-decoration: none;
+      color: black;
+    }
 
-        input[type="text"],
-        input[type="password"] {
-            width: 90%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
+    .mega-menu {
+      display: none;
+    }
 
-        input[type="submit"] {
-            background: #5cb85c;
-            color: #fff;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            border-radius: 5px;
-            width: 100%;
-        }
-
-        input[type="submit"]:hover {
-            background: #4cae4c;
-        }
-
-    </style>
+    .nav-links li:hover .mega-menu {
+      display: block;
+    }
+  </style>
 </head>
+
 <body>
-    <h3 id="DarkModetext">Dark Mode is OFF</h3>
-    <button onclick="darkMode()">Darkmode</button>
-      <button onclick="lightMode()">LightMode</button>
-      <script>
-          function darkMode() {
-              let element = document.body;
-              let content = document.getElementById("DarkModetext");
-              element.className = "dark-mode";
-              content.innerText = "Dark Mode is ON";
-          }
-          function lightMode() {
-              let element = document.body;
-              let content = document.getElementById("DarkModetext");
-              element.className = "light-mode";
-              content.innerText = "Dark Mode is OFF";
-          }
-      </script>
-<div class="container">
-    <h2>Giriş Yap</h2>
-    <form action="/ana_sayfa.html" >
-        <div class="form-group">
-            <label for="email">E-posta:</label>
-            <input type="text" id="email" name="email" required><br><br>
-        </div>
 
-        <div class="form-group">
-            <label for="password">Şifre:</label>
-            <input type="password" id="password" name="password" required><br><br>
-        </div>
+  <div style="text-align: center; background-color:lightblue; padding:15px;">
+    <!--en üsteki div sayfası-->
+    <h1 class="siyah">Ana Sayfa</h1>
+    <h3 id="DarkModetext">Karanlık Mod KAPALI</h3>
+    <button onclick="darkMode()">Siyah Mod</button>
+    <button onclick="lightMode()">Beyaz Mod</button>
 
-        <input type="submit" value="Giriş Yap"><br><br>
+    <script>
+      function darkMode() {
+        let element = document.body;
+        let content = document.getElementById("DarkModetext");
+        element.className = "dark-mode";
+        content.innerText = "Karanlık Mod AÇIK";
+      }
 
-        <button class="button button1"><a href="/ikinci_ornek.html">Yeni Hesap Aç</a></button>
-    </form>
-</div>
+      function lightMode() {
+        let element = document.body;
+        let content = document.getElementById("DarkModetext");
+        element.className = "light-mode";
+        content.innerText = "Karanlık Mod KAPALI";
+      }
+    </script>
 
+    <ul class="nav-links">
+      <li><a href="#başlangıç">Hakkımızda</a></li>
+      <hr>
+      <li><a href="#iletişim">İletişim</a></li>
+      <hr>
+      <li><a href="#Telefon">Telefon</a></li>
+      <hr>
+      <li><a href="mailto:tugra3418@gmail.com">E-mail</a></li>
+      <hr>
+    </ul>
+  </div>
+
+  <div class="sekmeler">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-2"></div>
+        <ul class="nav-links">
+          <!-- Ünlü Göller -->
+          <li>
+            <a href="#">Türkiye'deki Ünlü Göller</a>
+            <div class="mega-menu">
+              <div class="mega-menu-list2">
+                <ul>
+                  <li><a href="ana_sayfa.html">Van Gölü</a></li>
+                  <li><a href="ana_sayfa2.html">Tuz Gölü</a></li>
+                  <li><a href="ana_sayfa3.html">Salda Gölü</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <!-- Ünlü Camiler -->
+          <li>
+            <a href="#">Türkiye'deki Ünlü Camiler</a>
+            <div class="mega-menu">
+              <div class="mega-menu-list2">
+                <ul>
+                  <li><a href="ana_sayfa4.html">Selimiye Camii</a></li>
+                  <li><a href="ana_sayfa5.html">Süleymaniye Camii</a></li>
+                  <li><a href="ana_sayfa6.html">Sultanahmet Camii</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <!-- Efsanevi Yaratıklar -->
+          <li>
+            <a href="#">Türk Efsanevi Yaratıklar</a>
+            <div class="mega-menu">
+              <div class="mega-menu-list2">
+                <ul>
+                  <li><a href="ana_sayfa7.html">Şahmeran</a></li>
+                  <li><a href="ana_sayfa8.html">Tepe Göz</a></li>
+                  <li><a href="ana_sayfa9.html">Gulyabani</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+    <!-- Ortadaki div sayfan -->
+    <h1 id="başlangıç">Hakkında</h1>
+    <p class="İletişim">Merhaba, bu web sitesinde birçok bilgi ve farklı konularda içerikler bulabilirsiniz.</p>
+
+    <h1 id="iletişim">İletişim</h1>
+    <h2 id="adres">Adres</h2>
+    <p>Halkalı Merkez Mh. Yahya Kemal Beyatlı Gösteri Merkezi, Fatih Cd. No: 98 İç Kapı No:1, 34307 Küçükçekmece/İstanbul</p>
+    <hr>
+
+    <h2 id="Telefon">Telefon</h2>
+    <a class="İletişim" href="tel:+905449308018">+90543 478 42 83 </a>
+    <hr>
+
+    <h2 id="mail">E-mail</h2>
+    <a class="İletişim" href="mailto:tugra3418@gmail.com">tugra3418@gmail.com</a>
+  </div>
 
 </body>
+
 </html>

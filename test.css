@@ -1,0 +1,75 @@
+
+* {
+    box-sizing: border-box;
+    border-radius: 5px;
+   
+}
+
+/* web sitede görünen kısım*/
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    padding: 10px;
+    background-color: white;
+    color: black;
+}
+
+/*sol taraftaki div diğer web sitelere gidiyor*/
+.menu {
+    float: left;
+    width: 10%;
+    padding: 10px;
+}
+
+/*ortadaki div bilgi veriyor*/
+.main {
+    float: left;
+    width: 80%;
+    padding: 20px;
+    overflow: hidden;
+      /*ortadaki div sayfası ortalanmasını sağlıyor*/
+}
+
+details > summary {
+    padding: 4px;
+    background-color: lightblue;
+    border: none;
+    box-shadow: 1px 1px 2px #000000;
+    cursor: pointer;
+    /*soldaki div sayfası çevresine renklendirme */
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+  /*web siteyi siyah yapmak için */
+}
+
+.light-mode {
+    background-color: white;
+    color: black;
+ /*web siteyi beyaz yapmak için*/
+}
+
+summary{
+    color: black;
+ /*soldaki divin içindeki summary siyah yapmak için*/
+}
+
+.siyah{
+    color: #000;
+ /*en üsteki divin içindeki yazıları siyah yamak için*/
+}
+
+.nav-links a {
+color: #000000;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    position: relative;
+  
+  
+  }

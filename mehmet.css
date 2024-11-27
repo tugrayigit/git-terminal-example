@@ -1,0 +1,274 @@
+
+* {
+    box-sizing: border-box;
+    border-radius: 5px;
+   
+}
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    padding: 10px;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu {
+    float: left;
+    width: 10%;
+    padding: 10px;
+}
+.menuitem {
+    padding: 8px;
+    margin-top: 7px;
+    border-bottom: 1px solid lightblue;
+}
+.main {
+    float: left;
+    width: 80%;
+    padding: 20px;
+    overflow: hidden;
+      /*ortadaki div sayfasÄ± ortalanmasÄ±nÄ± saÄŸlÄ±yor*/
+}
+.right {
+    background-color: lightblue;
+    float: right;
+    width: 10%;
+    padding: 20px;
+    margin-top: 7px;
+     /*saÄŸdaki div sayfasÄ±nÄ±n iÃ§inde renklendirme */
+}
+details > summary {
+    padding: 4px;
+    background-color: lightblue;
+    border: none;
+    box-shadow: 1px 1px 2px #000000;
+    cursor: pointer;
+    /*soldaki div sayfasÄ± Ã§evresine renklendirme */
+}
+
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.light-mode {
+    background-color: white;
+    color: black;
+}
+
+
+
+/* mega menÃ¼ kÄ±smÄ± */
+
+
+  
+  .sekmeler{
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    position: relative;
+  
+  
+  }
+  
+  .container
+  {
+    margin: 0 230px;
+    padding: 0 15px;
+    position: relative;
+    
+  }
+  
+  .nav-links li {
+    margin-top:  8px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+  margin-right: 1px;
+  }
+  
+ 
+
+  
+  
+  .nav-links {
+    text-align: center;
+  } 
+  
+  .li a .nav-links {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .li a .nav-links::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    height: 1px;
+    width: 100%;
+  }
+
+  
+  
+  
+  
+  .mega-menu {
+    display: none;
+    background-color: #F8F8F8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    z-index: 1000;
+
+    top: 52%;
+    text-align: center;
+    justify-content: center;
+    margin: 20px;
+    vertical-align: top;
+  }
+  
+  
+  
+  
+  .nav-links li:hover .mega-menu {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+
+  .nav-links li:hover .nav-links a:hover {
+background-color: lightblue;
+color: lightblue;
+  }
+
+  
+  
+  
+  
+  
+  .mega-menu-list2 {
+    width: 100%;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .mega-menu-list2 ul {
+    list-style-type: none;
+    padding: 0;
+    justify-content: flex-start;
+  
+  }
+  
+  .mega-menu-list2 ul li {
+    margin-bottom: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    color: #000;
+    font-size: 14px;
+    height: 40px;
+    letter-spacing: -.25px;
+    line-height: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+    white-space: nowrap;
+    right: 10px;
+     position: relative;
+  
+  }
+    
+  
+  
+  .mega-menu-list2 ul li a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  
+  
+  .mega-menu-list2 {
+    border-radius: 10px;
+    color: #f60;
+    font-size: 14px;
+    letter-spacing: -.25px;
+    line-height: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+    white-space: nowrap;
+    width: calc(50% - 5px);
+    width: 100%;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    font-weight: 300px;
+    margin-left:50px;
+  }
+  
+
+
+  /* SaÄŸdaki YÃ¶nlendirme TuÅŸlarÄ± */
+
+
+  .sticky-div {
+    position: fixed;
+    top: 252px; /* Ãœstten uzaklÄ±k */
+    right: 9px; /* SaÄŸdan uzaklÄ±k */
+    background-color: lightblue;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 178px;
+    height: 470px;
+}
+.content {
+    height: 2000px; /* Sayfa kaydÄ±rma yapmak iÃ§in uzun iÃ§erik */
+}
+
+.sticky-div a{
+    text-decoration: none;
+    color: #000;
+}
+
+
+.mode{
+    max-width: 225px;
+    position: absolute;
+    overflow: hidden;
+}
+
+.button{
+    bottom: 20px;
+}
+
+ #DarkModeText{
+    color: black;
+}
+
+
+.light-mode {
+    background-color: white;
+    color: black;
+}
+
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+
+
