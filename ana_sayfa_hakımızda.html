@@ -1,0 +1,140 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Van Gölü Örnek Sayfa</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="mehmet.css">
+
+<style>
+  .İletişim{
+   color: red;
+    text-decoration: none;
+  }
+  .sekmeler{
+    background-color: white;
+  }
+  .Hakkında{
+text-align: center;
+  }
+
+</style>
+</head>
+<body>
+
+   
+    <div style="text-align: center; background-color:lightblue;padding:15px;">
+  
+      <!--en üsteki div sayfası-->
+
+  <h1 class="siyah">Ana Sayfa</h1>
+  <h3 id="DarkModetext">Karanlık Mod KAPALI</h3>
+    <button onclick="darkMode()">SiyahMod</button>
+    <button onclick="lightMode()">BeyazMod</button>
+    <script>
+      function darkMode() {
+        let element = document.body;
+        let content = document.getElementById("DarkModetext");
+        element.className = "dark-mode";
+        content.innerText = "Karanlık Mod AÇIK";
+      }
+      function lightMode() {
+        let element = document.body;
+        let content = document.getElementById("DarkModetext");
+        element.className = "light-mode";
+        content.innerText = "Karanlık Mod KAPALI";
+      }
+    </script>
+
+<ul class="nav-links">
+  <li> <a href="#başlangıç">hakımızda</a></li>
+  <hr>
+  <li><a href="#iletişim">iletişim</a></li>
+  <hr>
+  <a href="#Telefon">Telefon</a>
+  <hr>
+  <a href="#maill">E-mail</a>
+  <hr>
+  
+ </ul>
+
+</div>
+
+<div class="sekmeler">
+<div class="container">
+        <div class="row">
+   
+            <div class="clo-sm-2">
+ <ul class="nav-links">
+     <!-- Ünlü Göller -->
+     <li>
+         <a href="#">Türkiye'deki Ünlü Göller</a>
+         <div class="mega-menu">
+             <div class="mega-menu-list2">
+                 <ul>
+                     <li><a href="ana_sayfa.html">Van Gölü</a></li>
+                     <li><a href="ana_sayfa2.html">Tuz Gölü</a></li>
+                     <li><a href="ana_sayfa3.html">Salda Gölü</a></li>
+                 </ul>
+                
+             </div>
+         </div>
+     </li>
+
+     <!-- Ünlü Camiler -->
+     <li>
+         <a href="#">Türkiye'deki Ünlü Camiler</a>
+         <div class="mega-menu">
+             <div class="mega-menu-list2 ">
+                 <ul>
+                     <li><a href="ana_sayfa4.html">Selimiye Camii</a></li>
+                     <li><a href="ana_sayfa5.html">Süleymaniye Camii</a></li>
+                     <li><a href="ana_sayfa6.html">Sultanahmet Camii</a></li>
+                 </ul>
+             </div>
+         </div>
+     </li>
+
+     <!-- Efsanevi Yaratıklar -->
+     <li>
+         <a href="#">Türk Efsanevi Yaratıklar</a>
+         <div class="mega-menu">
+             <div class="mega-menu-list2">
+                 <ul>
+                     <li><a href="ana_sayfa7.html">Şahmeran</a></li>
+                     <li><a href="ana_sayfa8.html">Tepe Göz</a></li>
+                     <li><a href="ana_sayfa9.html">Gulyabani</a></li>
+                 </ul>
+             </div>
+         </div>
+     </li>
+ </ul>
+</div>
+</div>
+
+
+
+  <div class="Hakkında">
+    <!--Ortadaki div sayfan-->
+    <h1 id="#başlangıç">Hakkında</h1>
+    <p class="İletişim">merhaba bu web sitesinde birsürü bigiler ve daha değişik bilgiler var bu bilgiler </p>
+    <hr>
+     <h2 id="#adres">Adres</h2>
+     <p class="İletişim">Halkalı Merkez Mh. Yahya Kemal Beyatlı Gösteri Merkezi, Fatih Cd. No: 98 İç Kapı No:1, 34307 Küçükçekmece/İstanbul</p>
+     <hr>
+      <h2 id="#Telefon">Telefon</h2>
+        <a class="İletişim" href="tel:+905449308018">+90 543 478 42 83 </a>
+        <hr>
+      <h2 id="#mail">E-Mail</h2>     
+        <a class="İletişim" href="mailto:tugra3418@gmail.com">tugra3418@mail.com</a>
+        
+        
+
+
+      
+</div>
+
+</body>
+</html>
+
