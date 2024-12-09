@@ -1,215 +1,23 @@
 <!DOCTYPE html>
 <html lang="tr">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Van Gölü Örnek Sayfa</title>
-  <link rel="stylesheet" href="mehmet.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
+  <title>Dik Çizgi Örneği</title>
   <style>
-    /* General Style */
-    .İletişim {
-      color: red;
-      text-decoration: none;
-    }
-
-    .sekmeler {
-      background-color: white;
-    }
-
-    .Hakkında {
-      text-align: center;
-    }
-
-    /* Card Style */
-    .card {
-      margin: 10px;
-      width: 100%;
-      max-width: 18rem;
-      display: inline-block;
-      margin-bottom: 20px;
-    }
-
-    .card-img-top {
-      height: 150px;
-      object-fit: cover;
-    }
-
-    /* Dark Mode */
-    .dark-mode {
-      background-color: #121212;
-      color: white;
-    }
-
-    .dark-mode .card {
-      background-color: #333;
-      color: white;
-    }
-
-    .dark-mode .btn-primary {
-      background-color: #444;
-    }
-
-    /* Light Mode */
-    .light-mode {
-      background-color: white;
-      color: black;
-    }
-
-    /* Additional Styling for Buttons */
-    button {
-      background-color: #007bff;
-      color: white;
-      padding: 10px;
-      border: none;
-      cursor: pointer;
-      border-radius: 4px;
-    }
-
-    button:hover {
-      background-color: #0056b3;
-    }
-
-    /* Responsive Layout */
-    @media (max-width: 768px) {
-      .card {
-        width: 100%;
-      }
+    .dik-cizgi {
+      width: 1px;               /* Çizginin genişliği */
+      height: 200px;            /* Çizginin uzunluğu */
+      background-color: black;  /* Çizginin rengi */
+      margin: 20px auto;        /* Çizgiyi ortalamak */
     }
   </style>
-
-  <script>
-    function darkMode() {
-      let element = document.body;
-      let content = document.getElementById("DarkModetext");
-      element.className = "dark-mode";
-      content.innerText = "Karanlık Mod AÇIK";
-    }
-
-    function lightMode() {
-      let element = document.body;
-      let content = document.getElementById("DarkModetext");
-      element.className = "light-mode";
-      content.innerText = "Karanlık Mod KAPALI";
-    }
-  </script>
-
 </head>
-
 <body>
 
-  <div style="text-align: center; background-color: lightblue; padding: 15px;">
-    <h1 class="siyah">Ana Sayfa</h1>
-    <h3 id="DarkModetext">Karanlık Mod KAPALI</h3>
-    <button onclick="darkMode()">Karanlık Mod</button>
-    <button onclick="lightMode()">Beyaz Mod</button>
-  </div>
+  <h2>HTML ile Dik Çizgi Örneği</h2>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 col-sm-6">
-        <div class="card">
-          <img src="resim/van gölü 2.jpeg" class="card-img-top" alt="Van Gölü">
-          <div class="card-body">
-            <h5 class="card-title">Van Gölü</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="ana_sayfa.html" class="btn btn-primary">Van Gölü</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6">
-        <div class="card">
-          <img src="resim/tuz gölü 1.jpeg" class="card-img-top" alt="Tuz Gölü">
-          <div class="card-body">
-            <h5 class="card-title">Tuz Gölü</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="ana_sayfa2.html" class="btn btn-primary">Tuz Gölü</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6">
-        <div class="card">
-          <img src="resim/salda gölü 3.jpeg" class="card-img-top" alt="Salda Gölü">
-          <div class="card-body">
-            <h5 class="card-title">Salda Gölü</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="ana_sayfa3.html" class="btn btn-primary">Salda Gölü</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6">
-        <div class="card">
-          <img src="resim yok" class="card-img-top" alt="Salda Gölü">
-          <div class="card-body">
-            <h5 class="card-title">Salda Gölü</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="ana_sayfa4.html" class="btn btn-primary">Salda Gölü</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6">
-        <div class="card">
-          <img src="resim/Artwork_featuring_Shahmaran_for_sale_in_Mardin.jpg" class="card-img-top" alt="Süleymaniye Camii">
-          <div class="card-body">
-            <h5 class="card-title">Süleymaniye Camii</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="ana_sayfa5.html" class="btn btn-primary">Süleymaniye Camii</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6">
-        <div class="card">
-          <img src="resim/Artwork_featuring_Shahmaran_for_sale_in_Mardin.jpg" class="card-img-top" alt="Sultan Ahmet Camii">
-          <div class="card-body">
-            <h5 class="card-title">Sultan Ahmet Camii</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="ana_sayfa6.html" class="btn btn-primary">Sultan Ahmet Camii</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6">
-        <div class="card">
-          <img src="resim/sahmeran 2.jpg" class="card-img-top" alt="Şahmeran">
-          <div class="card-body">
-            <h5 class="card-title">Şahmeran</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="ana_sayfa7.html" class="btn btn-primary">Şahmeran</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6">
-        <div class="card">
-          <img src="resim/tepe göz 2.webp" class="card-img-top" alt="Tepegöz">
-          <div class="card-body">
-            <h5 class="card-title">Tepegöz</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="ana_sayfa8.html" class="btn btn-primary">Tepegöz</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6">
-        <div class="card">
-          <img src="resim/Gûlyabani.jpg" class="card-img-top" alt="Gulyabani">
-          <div class="card-body">
-            <h5 class="card-title">Gulyabani</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="ana_sayfa9.html" class="btn btn-primary">Gulyabani</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div class="dik-cizgi"></div> <!-- Dik çizgi burada oluşturuluyor -->
 
 </body>
-
 </html>

@@ -70,6 +70,9 @@
             color: #000;
          /*en üsteki divin içindeki yazıları siyah yamak için*/
         }
+        body{
+            text-align: center;
+        }
 
     .right p a {
       color: #000000;

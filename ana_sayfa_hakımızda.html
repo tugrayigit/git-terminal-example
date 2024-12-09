@@ -6,6 +6,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="mehmet.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
 
 <style>
   .İletişim{
@@ -18,13 +20,19 @@
   .Hakkında{
 text-align: center;
   }
-
+  .dik-cizgi {
+      width: 1px;               /* Çizginin genişliği */
+      height: 20px;            /* Çizginin uzunluğu */
+      background-color: black;  /* Çizginin rengi */
+      margin: 20px auto;        /* Çizgiyi ortalamak */
+    }
 </style>
 </head>
 <body>
 
    
     <div style="text-align: center; background-color:lightblue;padding:15px;">
+      
   
       <!--en üsteki div sayfası-->
 
@@ -45,6 +53,7 @@ text-align: center;
         element.className = "light-mode";
         content.innerText = "Karanlık Mod KAPALI";
       }
+
     </script>
 
 <ul class="nav-links">
@@ -67,6 +76,18 @@ text-align: center;
    
             <div class="clo-sm-2">
  <ul class="nav-links">
+  <li>
+    <a href="#">Ana Sayfa</a>
+    <div class="mega-menu">
+        <div class="mega-menu-list2">
+            <ul>
+                <li><a href="/ana_sayfa_ana.html">Ana sayfa</a></li>
+                <li><a href="/ana_sayfa_hakımızda.html">Hakımızda</a></li>
+                <li><a onclick="alert('Çok Yakında Gelice')">Market</a></li>
+            </ul>
+        </div>
+    </div>
+</li>
      <!-- Ünlü Göller -->
      <li>
          <a href="#">Türkiye'deki Ünlü Göller</a>
@@ -115,23 +136,25 @@ text-align: center;
 
 
 
+
   <div class="Hakkında">
     <!--Ortadaki div sayfan-->
     <h1 id="#başlangıç">Hakkında</h1>
-    <p class="İletişim">merhaba bu web sitesinde birsürü bigiler ve daha değişik bilgiler var bu bilgiler </p>
     <hr>
+    <p class="İletişim">merhaba bu web sitesinde birsürü bigiler ve daha değişik bilgiler var bu bilgiler </p>
+
      <h2 id="#adres">Adres</h2>
-     <p class="İletişim">Halkalı Merkez Mh. Yahya Kemal Beyatlı Gösteri Merkezi, Fatih Cd. No: 98 İç Kapı No:1, 34307 Küçükçekmece/İstanbul</p>
      <hr>
+      <i class="fa-solid fa-map-location-dot "style= "position: relative; right: 260px; top: 35px;"> = </i><p class="İletişim">Halkalı Merkez Mh. Yahya Kemal Beyatlı Gösteri Merkezi,<br> Fatih Cd. No: 98 İç Kapı No:1, 34307 Küçükçekmece/İstanbul</p>
+     
       <h2 id="#Telefon">Telefon</h2>
-        <a class="İletişim" href="tel:+905449308018">+90 543 478 42 83 </a>
-        <hr>
+      <hr>
+      <i class="fa-solid fa-phone"> = </i><a class="İletişim" href="tel:+905449308018">+90 543 478 42 83 </a> 
+        
       <h2 id="#mail">E-Mail</h2>     
-        <a class="İletişim" href="mailto:tugra3418@gmail.com">tugra3418@mail.com</a>
-        
-        
-
-
+      <hr>
+      <i class="fa-solid fa-envelope"> = </i><a class="İletişim" href="mailto:tugra3418@gmail.com">tugra3418@mail.com</a>
+  
       
 </div>
 
