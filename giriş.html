@@ -5,34 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giriş Yap</title>
     <style>  
-    label {
-        display: block;
-        margin-bottom: 5px;
-    }
+  
+    
     </style>
     <link rel="stylesheet" href="yeni_hesap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
-</head>
+    <link rel="stylesheet" href="ana_sayfa.css"></head>
 <body>
 
 <div class="container">
     <h2>Giriş Yap</h2>
     <form action="/ana_sayfa_ana.html" >
         <div class="form-group">
-            <label for="email">E-posta:</label>
-            <input type="text" id="email" name="email" required><br><br>
+            <i class="fa-solid fa-envelope">:</i><label for="email">E-posta</label>
+            <input type="text" id="email" name="email"  required><br><br>
         </div>
 
         <div class="form-group">
-            <label for="password">Şifre:</label>
+            <i class="fa-solid fa-lock">:</i><label for="password">Şifre</label>
             <input type="password" id="password" name="password" required><br><br>
         </div>
 
         <input type="submit" value="Giriş Yap"><br><br>
 
-        <button class="button button1"><a href="/ikinci_ornek.html">Yeni Hesap Aç</a></button>
+        <button class="button"><a href="/ikinci_ornek.html">Yeni Hesap Aç</a></button>
     </form>
 </div>
+
 
 
 </body>
