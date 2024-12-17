@@ -9,7 +9,6 @@
         body {
             font-family: Verdana, sans-serif;
             margin: 0;
-            padding: 10px;
             background-color: white;
             color: black;
        
@@ -89,6 +88,7 @@
         }
         .en_yukardaki > h3 {
             position: relative;
+            top: 15px;
             right: 0px;
             
         }
@@ -100,13 +100,12 @@
        }
        .en_yukardaki>.siyah1{
         left: 785px;
-        bottom: 38px;
         position: absolute;
         
        }
        .en_yukardaki>.siyah2{
         left: 690px;
-        top:  60px;
+        top:  75px;
         position: absolute;
        }
       

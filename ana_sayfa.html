@@ -7,6 +7,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <link rel="stylesheet" href="ana_sayfa.css">
+  
+  <style>
+    body{
+      margin: 0;
+      width: 100vw;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+}
+    label{
+      width: 100px;
+      height: 50px;
+      position: relative;
+      display: block;
+      background: #ebebeb;
+      border-radius: 200px;
+      box-shadow: inset 0px 5px 15px rgba(0, 0, 0,0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+      cursor: pointer;
+      transition: 0.3s;
+}
+    label::after{
+      content: "";  
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: linear-gradient(100deg,#ffcc89,#d8860b);
+      border-radius: 100px;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+}
+    input{
+      width: 0;
+      height: 0;
+      visibility: hidden;
+}
+    input:checked + label{
+      background: #242424;
+}
+    input:checked + label:after{
+      left: 95px;
+      transform: translateX(-100%);
+      background: linear-gradient(180deg,#777,#3a3a3a);
+}
+    label:active:after{
+      width: 50px;
+}
+    .background{
+      width: 98vw;
+      left: 0px;
+      height: 450vh;
+      background:white;
+      z-index: -1;
+      position: absolute;
+      transition: 0.3s;
+}
+    input:checked + label +.background{
+      background:black;
+}
+    label svg{
+      position: absolute;
+      width: 15px;
+      top: 17px;
+      z-index: 10;
+}
+    label svg.sun{
+      left: 18px;
+      fill: #fff;
+      transition: 0.3s;
+}
+    label svg.moon{
+      left: 74px;
+      fill: #7e7e7e;
+      transition: 0.3s;
+}
+    input:checked + label svg.sun{
+      fill: #7e7e7e;
+}
+    input:checked + label svg.moon{
+      fill: #fff;
+}
+
+</style>
 </head>
 <body>
 
@@ -17,22 +101,35 @@
     <h4 class="siyah2">(Van ve Bitlis illerinde yer alır.)</h4>
     
     <h3 id="DarkModetext">Karanlık Mod KAPALI</h3>
-    <button onclick="darkMode()">SiyahMod</button>
-    <button onclick="lightMode()">BeyazMod</button>
-    <script>
-      function darkMode() {
-        let element = document.body;
-        let content = document.getElementById("DarkModetext");
-        element.className = "dark-mode";
-        content.innerText = "Karanlık Mod AÇIK";
-      }
-      function lightMode() {
-        let element = document.body;
-        let content = document.getElementById("DarkModetext");
-        element.className = "light-mode";
-        content.innerText = "Karanlık Mod KAPALI";
-      }
-    </script>
+    <input type="checkbox" id="darkmode-toggle" />
+    <label for="darkmode-toggle">
+     
+     <svg fill="#000000" class="sun"  width="80px" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 512 512">
+       <g>
+         <g>
+           <path d="m256,105.5c-83.9,0-152.2,68.3-152.2,152.2 0,83.9 68.3,152.2 152.2,152.2 83.9,0 152.2-68.3 152.2-152.2 0-84-68.3-152.2-152.2-152.2zm0,263.5c-61.4,0-111.4-50-111.4-111.4 0-61.4 50-111.4 111.4-111.4 61.4,0 111.4,50 111.4,111.4 0,61.4-50,111.4-111.4,111.4z"/>
+           <path d="m256,74.8c11.3,0 20.4-9.1 20.4-20.4v-23c0-11.3-9.1-20.4-20.4-20.4-11.3,0-20.4,9.1-20.4,20.4v23c2.84217e-14,11.3 9.1,20.4 20.4,20.4z"/>
+           <path d="m256,437.2c-11.3,0-20.4,9.1-20.4,20.4v22.9c0,11.3 9.1,20.4 20.4,20.4 11.3,0 20.4-9.1 20.4-20.4v-22.9c0-11.2-9.1-20.4-20.4-20.4z"/>
+           <path d="m480.6,235.6h-23c-11.3,0-20.4,9.1-20.4,20.4 0,11.3 9.1,20.4 20.4,20.4h23c11.3,0 20.4-9.1 20.4-20.4 0-11.3-9.1-20.4-20.4-20.4z"/>
+           <path d="m54.4,235.6h-23c-11.3,0-20.4,9.1-20.4,20.4 0,11.3 9.1,20.4 20.4,20.4h22.9c11.3,0 20.4-9.1 20.4-20.4 0.1-11.3-9.1-20.4-20.3-20.4z"/>
+           <path d="M400.4,82.8L384.1,99c-8,8-8,20.9,0,28.9s20.9,8,28.9,0l16.2-16.2c8-8,8-20.9,0-28.9S408.3,74.8,400.4,82.8z"/>
+           <path d="m99,384.1l-16.2,16.2c-8,8-8,20.9 0,28.9 8,8 20.9,8 28.9,0l16.2-16.2c8-8 8-20.9 0-28.9s-20.9-7.9-28.9,0z"/>
+           <path d="m413,384.1c-8-8-20.9-8-28.9,0-8,8-8,20.9 0,28.9l16.2,16.2c8,8 20.9,8 28.9,0 8-8 8-20.9 0-28.9l-16.2-16.2z"/>
+           <path d="m99,127.9c8,8 20.9,8 28.9,0 8-8 8-20.9 0-28.9l-16.2-16.2c-8-8-20.9-8-28.9,0-8,8-8,20.9 0,28.9l16.2,16.2z"/>
+          </g>
+          </g>
+     </svg>
+ 
+     <svg fill="#000000" class="moon"  width="80px" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 512 512">
+       <g>
+         <g>
+           <path d="m275.4,500.7c-135,0-244.7-109.8-244.7-244.7 1.06581e-14-134.9 109.8-244.7 244.7-244.7 8.2,0 16.4,0.4 24.6,1.2 7.2,0.7 13.5,5.2 16.5,11.7s2.4,14.2-1.6,20.2c-23,33.8-35.2,73.3-35.2,114.2 0,105 78.7,192.2 183.2,202.6 7.2,0.7 13.5,5.2 16.5,11.7 3.1,6.5 2.4,14.2-1.6,20.2-45.8,67.4-121.4,107.6-202.4,107.6zm-12.5-448c-106.5,6.5-191.2,95.2-191.2,203.3 1.42109e-14,112.3 91.4,203.7 203.7,203.7 56.4,0 109.6-23.4 147.8-63.7-46.2-11.7-88.1-36.8-120.8-72.6-41.1-45.2-63.8-103.6-63.8-164.6 0.1-37.1 8.4-73.2 24.3-106.1z"/>
+         </g>
+       </g>
+     </svg>
+    </label>
+ 
+    <div class="background"></div>
   </div>
 
   <div class="menu">
@@ -45,32 +142,31 @@
     <hr>
     <details>
       <summary>Türkiye'deki Ünlü Göller</summary>
-      <button class="button"><a href="/ana_sayfa.html">Van Gölü</a></button>
-      <button class="button"><a href="/ana_sayfa2.html">Tuz Gölü</a></button>
-      <button class="button"><a href="/ana_sayfa3.html">Salda Gölü</a></button>
+        <button class="button"><a href="/ana_sayfa.html">Van Gölü</a></button>
+        <button class="button"><a href="/ana_sayfa2.html">Tuz Gölü</a></button>
+        <button class="button"><a href="/ana_sayfa3.html">Salda Gölü</a></button>
     </details>
     <hr>
     <details>
       <summary>Türkiye'deki Ünlü Camiler</summary>
-      <button class="button"><a href="/ana_sayfa4.html">Selimiye Camii</a></button>
-      <button class="button"><a href="/ana_sayfa5.html">Süleymaniye Camii</a></button>
-      <button class="button"><a href="/ana_sayfa6.html">Sultan Ahmet Camii</a></button>
+        <button class="button"><a href="/ana_sayfa4.html">Selimiye Camii</a></button>
+        <button class="button"><a href="/ana_sayfa5.html">Süleymaniye Camii</a></button>
+        <button class="button"><a href="/ana_sayfa6.html">Sultan Ahmet Camii</a></button>
     </details>
     <hr>
     <details>
       <summary>Türk efsanevi yaratıklar</summary>
-      <button class="button"><a href="/ana_sayfa7.html">Şahmeran</a></button>
-      <button class="button"><a href="/ana_sayfa8.html">Tepegöz</a></button>
-      <button class="button"><a href="/ana_sayfa9.html">Gulyabani</a></button>
+        <button class="button"><a href="/ana_sayfa7.html">Şahmeran</a></button>
+        <button class="button"><a href="/ana_sayfa8.html">Tepegöz</a></button>
+        <button class="button"><a href="/ana_sayfa9.html">Gulyabani</a></button>
     </details>
-    
   </div>
 
   <div class="main">
     <!--Ortadaki div sayfan-->
     <h2 id="başlangıç">Van Gölü </h2>
     <hr>
-    <p>Çok sayıda koyu bulunan Van Gölü'nün yüzölçümü 3.713 km2'dir.
+    <div class="cm"> <p>Çok sayıda koyu bulunan Van Gölü'nün yüzölçümü 3.713 km2'dir.
       Van Gölü hem tatlı su hem de deniz ekosistemlerinden farklı bir sucul ekosistemdir.
       Suları tuzlu ve sodalıdır. Göl suyu tuzluluk oranı %o19, pH'sı ise 9.8 dir. Bu yüzden Van Gölü yüksek rakıma ve
       sert kışlara rağmen donmaz.
@@ -80,11 +176,14 @@
       yıl olduğu belirlenmiştir.
       Gölün doğu bölümünde dört ada vardır.
       Bunlar; Akdamar, Çarpanak, Adır ve Kuş adalarıdır. Adalar tarihi ve turistik özelliğe sahiptir ve 1990 yılında
-      Arkeolojik Sit Alanı ilan edilmişlerdir.</p><br>
+      Arkeolojik Sit Alanı ilan edilmişlerdir.
+    </p><br>
+  </div>
 
     <center>
       <img src="resim/indir (2).jpeg" alt="resim" width="350">
     </center>
+    <br>
 
     <p>Van Gölü dünyanın en büyük sodalı gölüdür ayrıca Türkiye'de bulunan en büyük göldür. Gölün tuzlu-sodalı suları,
       biyolojik çeşitliliği sınırlamaktadır.
@@ -99,7 +198,8 @@
       Söylentiyi çıkaranların amaçlarının bölgeye turist çekmek olduğu söylense de, söylentileri araştırmak amacıyla
       bölgede pek çok bilimsel araştırma ekibi çalışmalar yapmıştır.
       İstanbul-Tahran demiryolu hatlarını da bağlamaktadır. Türkiye ve İran'a bağlanan demir yolu 1970'lerde
-      yapılmıştır.</p><br>
+      yapılmıştır.
+    </p><br>
 
 
 
@@ -113,7 +213,8 @@
       oluşturmuş.
       Bu akım Van Çukuru ile Muş Çukuru arasındaki su akımını engelleyince göl oluşmuştur.
       Günümüzdeki araştırmalarda Doğu Toros Dağlarının erozyona uğraması sonucu Van Gölü'ndeki suların Dicle’ye dökülüp,
-      gölün küçüleceği ya da yok olacağı düşünülmektedir.</p><br>
+      gölün küçüleceği ya da yok olacağı düşünülmektedir.
+    </p><br>
 
 
 
@@ -131,12 +232,14 @@
       Modern Van şehri bu kalenin doğusunda yer alır. Yüzölçümü3.713 km2’dir.
       Denizden yüksekliği 1.646m derinliği ise 457m‘yi aşmaktadır.
       Gölün doğusunda Akdamar, Çarpanak, Adır ve Kuş adaları bulunmaktadır.
-      Bu adalar turistlik özelliğe sahiptir. Sit alanı olarak ilan edilmiştir. </p><br>
+      Bu adalar turistlik özelliğe sahiptir. Sit alanı olarak ilan edilmiştir. 
+    </p><br>
 
     <center>
       <img src="resim/indir (4).jpeg" alt="resim" width="350">
 
     </center>
+    <br>
 
 
     <h2 id="Van Gölü Canavarı">Van Gölü Canavarı Hikayesi</h2>
@@ -152,11 +255,13 @@
       Zamanla bu varlığı gördüğünü iddia edenlerin sayısı artınca, olay basına da yansıdı ve bunun üzerine resmî
       kurumlar tarafından bölgeye bir bilimsel araştırma ekibi gönderildi.
       Ancak, yapılan araştırmalar sonucunda gölde olağan dışı herhangi bir varlığın olduğuna ilişkin hiçbir iz
-      bulunamadı.</p><br>
+      bulunamadı.
+    </p><br>
       <center>
         <img src="resim/van gölü canavarı.jpeg" alt="" width="350">
       </center>
 
+      <br>
     <h2 id="Bölgenin">Bölgenin Jeomorfolojisi ve Stratigrafik Yapısı</h2>
     <hr>
     <p>Coğrafya Kapalı bir havza olan Van Havzası, eski Muş-Van çukurluğunun bir parçasıdır.
@@ -171,7 +276,8 @@
       doğru ilerleyen hattın Yukarı Murat Havzası’nın güneyi ile sınırlayabileceğimiz Havza, kuzeyden Meydan Dağı,
       Bozdağ, Muratbaşı (Hüdavendigar) Dağları, Aladağ ve Tendürek dağlarıyla çevrelenir.
       Havza, doğuda Van Doğusu Dağları’nın batısında kalan alanları da içine alarak aslında Van Gölü’nün ekolojik ve
-      iklimsel etkilerinin görüldüğü yerler olarak değerlendirilebilir.</p><br>
+      iklimsel etkilerinin görüldüğü yerler olarak değerlendirilebilir.
+    </p><br>
 
     <p>İnceleme alanı genelinde, Paleozoik’ten günümüze kadar olan zaman aralığını temsil eden metamorfik, mağmatik ve
       sedimanter kayaç gruplarına ait kayaçlar yüzeylenmektedir.
@@ -179,7 +285,7 @@
       <center>
         <img src="resim/indir.jpeg" alt="resim" width="350">
       </center>
-
+      <br>
       Bu çalma kapsamında inceleme alanının jeolojik yapısı, inceleme alanının büyüklüğü ile yüzeylenen birimlerin
       yaşları ve kökenleri dikkate alınarak, jeolojik birimler sekiz birim altında incelenmiştir.
       İnceleme alanının temelinde, Paleozoik - Mezozoik yaşlı Bitlis Masifine ait gnays, Şist, kuvarsit ve mermerler
@@ -200,12 +306,13 @@
       Zemobat gibi küçük akarsu ve mevsimlik derelerin oluşturduğu nispeten büyük olan Van ovası, Adilcevaz’ın kuzey
       doğusunda bulunan Arın ovası ve araştırma sahamızın da bir kısmının içinde yer aldığı gölün güney doğu kısmında
       yer alan 45 km uzunluğunda, 7 km kadar genişliğinde ve 135 km2'lik bir alana sahip olan Gevaş-Gürpınar ovası yer
-      almaktadır.</p><br>
+      almaktadır.
+    </p><br>
 
     <center>
       <img src="resim/Deveboynu_yarımadası.jpg" alt="......" width="350">
     </center>
-
+    <br>
     <h2 id="Van Gölü Havzası Drenaj Alanı">Van Gölü Havzası Drenaj Alanı</h2>
     <hr>
     <p>Van Gölü kapalı havzasının göl alanlar dâhil, yüzeysel drenaj alan 15495 km2’dir.
@@ -220,7 +327,8 @@
       16096 km2 genişliğindeki Havza’nın tabanına Van Gölü yerleşmiştir. % 2,6 tuzluluk oranıyla bir soda gölü olan Van
       Gölü 3626 km2 yüzey alanı, 607 km3 hacmi, 12470 km2 drenaj alanı ve maksimum 451 metre derinliği ile Türkiye’nin
       kara içerisindeki en büyük su kütlesidir.
-      Su yüzeyinin denizden yüksekliği son yıllarda 1655 metreyi bulmuştur.</p><br>
+      Su yüzeyinin denizden yüksekliği son yıllarda 1655 metreyi bulmuştur.
+    </p><br>
 
     <h2 id="Seviye değişiklikleri">Seviye değişiklikleri</h2>
     <hr>
@@ -228,10 +336,12 @@
       Göle dökülen Engil Çayı'nın yaptığı deltalar farklı yüksekliklerde yer alır.
       Göl yüzeyinin daha yüksek olduğu iki dönemde oluşan deltalardan birisi 1695–1710 m, ikincisi 1670–1690 m
       seviyelerindedir.
-      Engil Çayı'nın günümüzde oluşturduğu aktüel delta ağzı da yıllara göre değişimler göstermektedir.</p><br>
+      Engil Çayı'nın günümüzde oluşturduğu aktüel delta ağzı da yıllara göre değişimler göstermektedir.
+    </p><br>
 
     <p>Engil Deltasının batı ucunda yer alan Dilkaya Höyüğü seviye değişimlerinden fazlaca etkilenmiştir.
-      Gölün yükseldiği dönemlerde höyüğün yarısı yok olmuş, batı kısmı faleze dönmüştür.</p><br>
+      Gölün yükseldiği dönemlerde höyüğün yarısı yok olmuş, batı kısmı faleze dönmüştür.
+    </p><br>
 
     <p>Yağışların göle ulaşması birkaç yıl alabilmektedir. Yüksek ve karasal iklime sahip havzada yağışlar kar
       şeklindedir.
@@ -241,7 +351,8 @@
       1992-96 yılları arasında gölde afet boyutunda yükselme yaşanmıştır. Göl çevresindeki yollar, evler ve tarım
       alanları zarar görmüştür.
       Göl en düşük seviyeye 1963'te (1646,6 m), en yüksek seviyeye 1996'da (1650,55 m) ulaşmıştır.
-      Maksimum ve minumum seviye farkı 3,36 m'dir.</p>
+      Maksimum ve minumum seviye farkı 3,36 m'dir.
+    </p>
 
     <h2 id="önemli">Önemli!!! Van Gölü her geçen yıl biraz daha çekiliyor </h2>
 
@@ -249,12 +360,13 @@
 
     <p>Bu yıl geçtiğimiz yıllara nazaran daha fazla yağış olmasına rağmen Van Gölü'nde suyun yükselmesi istenen seviyede
       gerçekleşmedi. Özellikle Van Gölü'nün Adilcevaz ve Tatvan ilçesindeki sahillerinde yaşanan su çekilmesi sonucu
-      ortaya çıkan mikrobiyalitler vatandaşları da şaşırttı.</p>
+      ortaya çıkan mikrobiyalitler vatandaşları da şaşırttı.
+    </p>
 
     <center>
       <img src="resim/van-golu-her-gecen-yil-biraz-daha-cekiliyor-9128.webp" alt="" width="350">
     </center>
-    
+    <br> 
 
   </div>
 
