@@ -35,7 +35,7 @@
         .right {
             position: fixed;
            /* top: 169px;  Ãœstten uzaklÄ±k */
-            right: 10px; /* SaÄŸdan uzaklÄ±k */
+            right: 0px; /* SaÄŸdan uzaklÄ±k */
             background-color: lightblue;
             padding: 10px;
             border: 1px solid #ccc;

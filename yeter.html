@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    <link rel="stylesheet" href="yeter.css">
+    <title></title>
+</head>
+<body>
+    <div class="toggle-btn" onclick="myFunction()">
+        <div class="icon">
+            <i class='bx bxs-moon'></i>
+        </div>
+    </div>
+    <script>
+        
+        function myFunction(){
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        };
+
+
+        const toggleBtn =document.querySelector(".toggle-btn"),
+        lockIcon =document.querySelector(".icon i");
+
+        toggleBtn.addEventListener("click", () =>{
+            toggleBtn.classList.toggle("active");
+          if (toggleBtn.classList.contains("active")){
+            return lockIcon.classList.replace("bxs-moon","bxs-sun");
+          };
+          lockIcon.classList.replace("bxs-sun","bxs-moon");
+        });
+    </script>
+</body>
+</html>
