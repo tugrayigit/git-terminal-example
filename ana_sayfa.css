@@ -2,7 +2,6 @@
  * {
             box-sizing: border-box;
             border-radius: 5px;
-           
         }
 
         /* web sitede görünen kısım*/
@@ -11,7 +10,6 @@
             margin: 0;
             background-color: white;
             color: black;
-       
         }
 
      /*sol taraftaki div diğer web sitelere gidiyor*/
@@ -27,7 +25,6 @@
             width: 80%;
             padding: 20px;
             text-align: center;
-          
               /*ortadaki div sayfası ortalanmasını sağlıyor*/
         }
  
@@ -78,30 +75,35 @@
          .right p a {
             color: #000000;    
          }
+
         a{
             color: black;
         }
+
         .en_yukardaki{
             position: relative;
+            width: 100%;
             background-color: lightblue;
             padding: 15px;
         }
+
         .en_yukardaki > h3 {
             top: 15px;
             right: 0px;
             
         }
+        
         .en_yukardaki > button {
           position: relative;
             margin-top: 0px;
             right: 0px;
-  
        }
+
        .en_yukardaki>.siyah1{
         left: 785px;
-        position: absolute;
-        
+        position: absolute; 
        }
+
        .en_yukardaki>.siyah2{
         left: 690px;
         top:  75px;

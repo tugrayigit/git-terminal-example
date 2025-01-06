@@ -2,13 +2,16 @@
 <html lang="en">
 
 <head>
+
   <title>Van Gölü Örnek Sayfa</title>
+  <link rel="website icon" type="png" href="resim/deneme .jpeg">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <link rel="stylesheet" href="ana_sayfa.css">
   
   <style>
+
     body{
       margin: 0;
       width: 100vw;
@@ -16,6 +19,7 @@
       align-items: center;
       justify-content: center;
 }
+
     label{
       width: 120px;
       height: 50px;
@@ -27,6 +31,7 @@
       cursor: pointer;
       transition: 0.3s;
 }
+
     label::after{
       content: "";  
       width: 30px;
@@ -39,22 +44,27 @@
       box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
       transition: 0.3s;
 }
+
     input{
       width: 0;
       height: 0;
       visibility: hidden;
 }
+
     input:checked + label{
       background: #242424;
 }
+
     input:checked + label:after{
       left: 110px;
       transform: translateX(-100%);
       background: linear-gradient(180deg,#777,#3a3a3a);
 }
+
     label:active:after{
       width: 50px;
 }
+
     .background{
       width: 100vw;
       left: 0px;
@@ -64,36 +74,41 @@
       position: absolute;
       transition: 0.3s;
 }
+
     input:checked + label +.background{
       background:black;
 }
+
     label svg{
       position: absolute;
       width: 15px;
       top: 17px;
       z-index: 10;
 }
+
     label svg.sun{
       left: 18px;
       fill: #fff;
       transition: 0.3s;
 }
+
     label svg.moon{
       left: 88px;
       fill: #7e7e7e;
       transition: 0.3s;
 }
+
     input:checked + label svg.sun{
       fill: #7e7e7e;
 }
+
     input:checked + label svg.moon{
       fill: #fff;
 }
 
-
-
 </style>
 </head>
+
 <body>
 
   <div class="en_yukardaki">
@@ -102,7 +117,7 @@
     <h1 class="siyah1">Van Gölü</h1>
     <h4 class="siyah2">(Van ve Bitlis illerinde yer alır.)</h4>
     
-    <h3 id="DarkModetext">Karanlık Mod KAPALI</h3>
+    <h3 id="DarkModetext">Siyah Ve Beyaz Mod</h3>
     <input type="checkbox" id="darkmode-toggle" />
     <label for="darkmode-toggle">
      
@@ -142,40 +157,51 @@
       <button class="button"><a href="/ana_sayfa_hakımızda.html">Hakımızda</a></button>
       <button class="button"><a href="deneme.html">Market</a></button>
     </details>
+
     <hr>
+    
     <details>
       <summary>Türkiye'deki Ünlü Göller</summary>
         <button class="button"><a href="/ana_sayfa.html">Van Gölü</a></button>
         <button class="button"><a href="/ana_sayfa2.html">Tuz Gölü</a></button>
         <button class="button"><a href="/ana_sayfa3.html">Salda Gölü</a></button>
     </details>
+    
     <hr>
+    
     <details>
       <summary>Türkiye'deki Ünlü Camiler</summary>
         <button class="button"><a href="/ana_sayfa4.html">Selimiye Camii</a></button>
         <button class="button"><a href="/ana_sayfa5.html">Süleymaniye Camii</a></button>
         <button class="button"><a href="/ana_sayfa6.html">Sultan Ahmet Camii</a></button>
     </details>
+    
     <hr>
+    
     <details>
       <summary>Türk efsanevi yaratıklar</summary>
         <button class="button"><a href="/ana_sayfa7.html">Şahmeran</a></button>
         <button class="button"><a href="/ana_sayfa8.html">Tepegöz</a></button>
         <button class="button"><a href="/ana_sayfa9.html">Gulyabani</a></button>
     </details>
+    
     <hr>
+    
     <details>
       <summary>Zeka Geliştiren Oyunlar</summary>
       <button class="button"><a href="oyun3.html">Satranç</a></button>
       <button class="button"><a href="oyun1.html">Yılan Oyunu</a></button>
       <button class="button"><a href="oyun2.html">Tetris</a></button>
     </details>
+  
   </div>
 
   <div class="main">
     <!--Ortadaki div sayfan-->
     <h2 id="başlangıç">Van Gölü </h2>
+    
     <hr>
+    
     <div class="cm"> <p>Çok sayıda koyu bulunan Van Gölü'nün yüzölçümü 3.713 km2'dir.
       Van Gölü hem tatlı su hem de deniz ekosistemlerinden farklı bir sucul ekosistemdir.
       Suları tuzlu ve sodalıdır. Göl suyu tuzluluk oranı %o19, pH'sı ise 9.8 dir. Bu yüzden Van Gölü yüksek rakıma ve
@@ -187,12 +213,15 @@
       Gölün doğu bölümünde dört ada vardır.
       Bunlar; Akdamar, Çarpanak, Adır ve Kuş adalarıdır. Adalar tarihi ve turistik özelliğe sahiptir ve 1990 yılında
       Arkeolojik Sit Alanı ilan edilmişlerdir.
-    </p><br>
+    </p>
+    
+    <br>
   </div>
 
     <center>
       <img src="resim/indir (2).jpeg" alt="resim" width="350">
     </center>
+    
     <br>
 
     <p>Van Gölü dünyanın en büyük sodalı gölüdür ayrıca Türkiye'de bulunan en büyük göldür. Gölün tuzlu-sodalı suları,
@@ -226,7 +255,7 @@
       Günümüzdeki araştırmalarda Doğu Toros Dağlarının erozyona uğraması sonucu Van Gölü'ndeki suların Dicle’ye dökülüp,
       gölün küçüleceği ya da yok olacağı düşünülmektedir.
     </p>
-    
+
     <br>
 
     <h2 id="Tarihçe">Tarihçe</h2>
@@ -275,7 +304,6 @@
       Ancak, yapılan araştırmalar sonucunda gölde olağan dışı herhangi bir varlığın olduğuna ilişkin hiçbir iz
       bulunamadı.
     </p>
-    
     <br>
     
     <center>
@@ -311,9 +339,9 @@
       <center>
         <img src="resim/indir.jpeg" alt="resim" width="350">
       </center>
-
+    
       <br>
-
+    
       Bu çalma kapsamında inceleme alanının jeolojik yapısı, inceleme alanının büyüklüğü ile yüzeylenen birimlerin
       yaşları ve kökenleri dikkate alınarak, jeolojik birimler sekiz birim altında incelenmiştir.
       İnceleme alanının temelinde, Paleozoik - Mezozoik yaşlı Bitlis Masifine ait gnays, Şist, kuvarsit ve mermerler
@@ -344,11 +372,11 @@
     </center>
     
     <br>
-
+    
     <h2 id="Van Gölü Havzası Drenaj Alanı">Van Gölü Havzası Drenaj Alanı</h2>
     
     <hr>
-
+    
     <p>Van Gölü kapalı havzasının göl alanlar dâhil, yüzeysel drenaj alan 15495 km2’dir.
       Van Gölü’nün yüzey alan (serbest su yüzeyi) 3558 km2 ile 3626 km2 arasında değişmekte olup, ortalama gölalan ise
       3580 km2 olarak hesaplanmıştır.
@@ -362,25 +390,28 @@
       Gölü 3626 km2 yüzey alanı, 607 km3 hacmi, 12470 km2 drenaj alanı ve maksimum 451 metre derinliği ile Türkiye’nin
       kara içerisindeki en büyük su kütlesidir.
       Su yüzeyinin denizden yüksekliği son yıllarda 1655 metreyi bulmuştur.
-
     </p>
     
     <br>
 
     <h2 id="Seviye değişiklikleri">Seviye değişiklikleri</h2>
-
+    
     <hr>
-
+    
     <p>Van Gölü Kuvaterner devri boyunca süren iklim değişimlerinde fazlaca etkilenmiş bir kapalı havza gölüdür.
       Göle dökülen Engil Çayı'nın yaptığı deltalar farklı yüksekliklerde yer alır.
       Göl yüzeyinin daha yüksek olduğu iki dönemde oluşan deltalardan birisi 1695–1710 m, ikincisi 1670–1690 m
       seviyelerindedir.
       Engil Çayı'nın günümüzde oluşturduğu aktüel delta ağzı da yıllara göre değişimler göstermektedir.
-    </p><br>
+    </p>
+    
+    <br>
 
     <p>Engil Deltasının batı ucunda yer alan Dilkaya Höyüğü seviye değişimlerinden fazlaca etkilenmiştir.
       Gölün yükseldiği dönemlerde höyüğün yarısı yok olmuş, batı kısmı faleze dönmüştür.
-    </p><br>
+    </p>
+    
+    <br>
 
     <p>Yağışların göle ulaşması birkaç yıl alabilmektedir. Yüksek ve karasal iklime sahip havzada yağışlar kar
       şeklindedir.
@@ -413,24 +444,39 @@
   <!--başlıklara giden div sayfası-->
   <div class="right">
     <p><a href="#başlangıç">Van Gölü</a></p>
+
     <hr>
+    
     <p><a href="#Oluşumu">Oluşumu</a></p>
+    
     <hr>
+    
     <p><a href="#Tarihçe">Tarihi</a></p>
+    
     <hr>
+    
     <p><a href="#Van Gölü Canavarı">Van Gölü Canavarı rivayet</a></p>
+    
     <hr>
+    
     <p><a href="#Bölgenin">Bölgenin Jeomorfolojisi ve Stratigrafik Yapısı</a></p>
+    
     <hr>
+    
     <p><a href="#Alüvyal Ovalar">Alüvyal Ovalar</a></p>
+    
     <hr>
+    
     <p><a href="#Van Gölü Havzası Drenaj Alanı">Van Gölü Havzası Drenaj Alanı</a></p>
+    
     <hr>
+    
     <p><a href="#Seviye değişiklikleri">Seviye değişiklikleri</a></p>
+    
     <hr>
+    
     <p><a href="#önemli">ÖNEMLİ!!!</a></p>
 
   </div>
-
 </body>
 </html>

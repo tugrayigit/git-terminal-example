@@ -4,8 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    height: 100vh;
-    display: flex;
+    height: 100vh; 
     justify-items: center;
     align-items: center;
     background-color: #fff;
@@ -15,8 +14,8 @@ body{
 }
 .toggle-btn{
     position: relative;
-    height: 155px;
-    width: 300px;
+    height: 50px;
+    width: 120px;
     cursor: pointer;
     background-color: #ddd;
     border-radius: 100px;
@@ -28,11 +27,11 @@ body{
 .toggle-btn .icon{
     position: absolute;
     top: 50%;
-    left: 20px;
+    left: 8px;
     transform: translateY(-50%);
-    height: 120px;
-    width: 120px;
-    font-size: 70px;
+    height:35px;
+    width: 37px;
+    font-size: 30px;
     color: #999;
     display: flex;
     justify-content: center;
@@ -43,6 +42,6 @@ body{
     transition: all 0.5s ease;
 }
 .toggle-btn.active .icon{
-left: calc(100% - 120px - 20px);
+left: calc(100% - 25px - 20px);
 color: #7d2ae8;
 }
