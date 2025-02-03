@@ -20,10 +20,18 @@ body{
     background-color: #ddd;
     border-radius: 100px;
     transition: all 0.5s ease;
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4)
 }
+
 .toggle-btn.active{
- background-color: #7d2ae8;
+ background-color: #000;
 }
+
+.toggle-btn:active::after{
+/*Bu kodda normade uzuyor ama olmuyor*/
+    width: 500px;
+  }
+
 .toggle-btn .icon{
     position: absolute;
     top: 50%;
@@ -43,5 +51,9 @@ body{
 }
 .toggle-btn.active .icon{
 left: calc(100% - 25px - 20px);
-color: #7d2ae8;
+color: #000;
 }
+
+.toggle-btn:active:after{
+    width: 50px;
+  }

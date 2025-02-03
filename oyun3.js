@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Event listener for the "Set Position" button
     document.querySelector('.set-pos').addEventListener('click', () => {
-        const fen = prompt("Enter the FEN notation for the desired position!");
+        const fen = prompt("İstediğiniz pozisyon için FEN notasyonunu girin!");
         if (fen !== null) {
             if (game.load(fen)) {
                 board.position(fen);
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 moveCount = 1;
                 userColor = 'w';
             } else {
-                alert("Invalid FEN notation. Please try again.");
+                alert("Geçersiz FEN gösterimi. Lütfen tekrar deneyin.");
             }
         }
     });

@@ -37,6 +37,7 @@
             padding: 10px;
             border: 1px solid #ccc;
             width: 178px;
+            border-radius: 0px;
              /*sağdaki div sayfasının içinde renklendirme */
         }
 
@@ -71,7 +72,6 @@
          /*en üsteki divin içindeki yazıları siyah yamak için*/
         }
        
-
          .right p a {
             color: #000000;    
          }
@@ -83,8 +83,10 @@
         .en_yukardaki{
             position: relative;
             width: 100%;
-            background-color: lightblue;
+            background-color: lightblue;/* bunu hiç semedim  */
+         /* background-color: darkred; *//* bu kod daki belki rengi yapabilirim  */
             padding: 15px;
+            border-radius: 0px;
         }
 
         .en_yukardaki > h3 {
@@ -103,7 +105,7 @@
         left: 785px;
         position: absolute; 
        }
-
+       
        .en_yukardaki>.siyah2{
         left: 690px;
         top:  75px;

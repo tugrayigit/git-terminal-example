@@ -1,5 +1,8 @@
+        *{
+            border-radius: 5px;
+        }
+        
         body {
-     
             background-image: url('resim/download.jpg');
             background-size: cover;
             background-position: center;
@@ -52,3 +55,7 @@
         } 
         
 
+        button a{    
+            color: black; 
+            text-decoration: none;
+        }
