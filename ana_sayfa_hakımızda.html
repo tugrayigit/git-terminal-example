@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="mehmet.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
-
+<link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+<link rel="stylesheet" href="yeter.css">
 <style>
 
   .İletişim{
@@ -30,6 +31,8 @@
       margin: 20px auto;        /* Çizgiyi ortalamak */
   }
 
+  
+
 </style>
 </head>
 
@@ -41,23 +44,45 @@
 
   <h1 class="siyah">Ana Sayfa</h1>
   <h3 id="DarkModetext">Karanlık Mod KAPALI</h3>
-    <button onclick="darkMode()">SiyahMod</button>
-    <button onclick="lightMode()">BeyazMod</button>
-    <script>
-      function darkMode() {
-        let element = document.body;
-        let content = document.getElementById("DarkModetext");
-        element.className = "dark-mode";
-        content.innerText = "Karanlık Mod AÇIK";
-      }
-      function lightMode() {
-        let element = document.body;
-        let content = document.getElementById("DarkModetext");
-        element.className = "light-mode";
-        content.innerText = "Karanlık Mod KAPALI";
-      }
+  <div class="en_yukardaki">
+    <!--en üsteki div sayfası-->
 
-    </script>
+    <h1 class="siyah1">Van Gölü</h1>
+    <h4 class="siyah2">(Van ve Bitlis illerinde yer alır.)</h4>
+    
+    <h3 id="DarkModetext">Siyah Ve Beyaz Mod</h3>
+    <div class="toggle-btn" onclick="myFunction()">
+      <div class="icon">
+          <i class='bx bxs-sun'></i>
+      </div>
+  
+  </div>
+  
+  <script>
+      
+    function myFunction(){
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+    };
+  
+  
+    const toggleBtn =document.querySelector(".toggle-btn"),
+    lockIcon =document.querySelector(".icon i");
+  
+    toggleBtn.addEventListener("click", () =>{
+        toggleBtn.classList.toggle("active");
+      if (toggleBtn.classList.contains("active")){
+        return lockIcon.classList.replace("bxs-sun","bxs-moon");
+      };
+      lockIcon.classList.replace("bxs-moon","bxs-sun");
+    });
+  </script>
+ 
+    <div class="background"></div>
+
+  </div>
+  
+    
 
 <ul class="nav-links">
   <li> <a href="#başlangıç">hakımızda</a></li>
@@ -84,7 +109,7 @@
     <div class="mega-menu">
         <div class="mega-menu-list2">
             <ul>
-                <li><a href="/ana_sayfa_ana.html">Ana sayfa</a></li>
+                <li><a href="index.html">Ana sayfa</a></li>
                 <li><a href="/ana_sayfa_hakımızda.html">Hakımızda</a></li>
                 <li><a onclick="alert('Çok Yakında Gelice')">Market</a></li>
             </ul>

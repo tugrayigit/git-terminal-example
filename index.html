@@ -4,6 +4,8 @@
 <head>
 <title>Van Gölü Örnek Sayfa</title>
 <meta charset="UTF-8">
+<link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+<link rel="stylesheet" href="yeter.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="mehmet.css">
 <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
@@ -53,23 +55,34 @@ hr {
       <!--en üsteki div sayfası-->
 
   <h1 class="siyah">Ana Sayfa</h1>
-  <h3 id="DarkModetext">Karanlık Mod KAPALI</h3>
-    <button onclick="darkMode()">SiyahMod</button>
-    <button onclick="lightMode()">BeyazMod</button>
-    <script>
-      function darkMode() {
-        let element = document.body;
-        let content = document.getElementById("DarkModetext");
-        element.className = "dark-mode";
-        content.innerText = "Karanlık Mod AÇIK";
-      }
-      function lightMode() {
-        let element = document.body;
-        let content = document.getElementById("DarkModetext");
-        element.className = "light-mode";
-        content.innerText = "Karanlık Mod KAPALI";
-      }
-    </script>
+  <h3 id="DarkModetext">Siyah Ve Beyaz Mod</h3>
+  <div class="toggle-btn" onclick="myFunction()">
+    <div class="icon">
+        <i class='bx bxs-sun'></i>
+    </div>
+
+</div>
+
+<script>
+    
+  function myFunction(){
+      var element = document.body;
+      element.classList.toggle("dark-mode");
+  };
+
+
+  const toggleBtn =document.querySelector(".toggle-btn"),
+  lockIcon =document.querySelector(".icon i");
+
+  toggleBtn.addEventListener("click", () =>{
+      toggleBtn.classList.toggle("active");
+    if (toggleBtn.classList.contains("active")){
+      return lockIcon.classList.replace("bxs-sun","bxs-moon");
+    };
+    lockIcon.classList.replace("bxs-moon","bxs-sun");
+  });
+</script>
+
 
 </div>
 
@@ -154,9 +167,11 @@ hr {
     <a href="ana_sayfa9.html" class="btn btn-primary">Gulyabani</a>
   </div>
 </div>
+
 <br>
 
 <h1>Oyunlar</h1>
+
 <hr>
 
 <div class="card">
